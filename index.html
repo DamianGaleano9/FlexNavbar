@@ -5,13 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .navbar {
+            background-color: #415068;
+        }
+
+        .navbar div{
+            display: none;
+        }
+
+        .navbar .toggle, 
+        .navbar .brand {
+            display: inline-block;
+        }
+
+        .navbar .link {
+            display: block;
+            text-align: center;
+            padding: 1em;
+            text-decoration: none;
+            background-color: #223047;
+            color: white;
+        }
+
+        .navbar .link:hover,
+        .navbar .link:active {
+            color: #223047;
+            background-color: white;
+        }
+
+        .navbar .brand {
+            width: 10em;
+            text-align: center;
+            padding: 1em;
+            color: white;
+        }
+
+        .navbar a {
+            text-decoration: none;
+        }
+
+        .navbar .toggle{
+            padding: 1em;
+            color: black;
+        }
+
+
+    </style>
 </head>
 <body>
     <div class="navbar">
         <a href="#" class="brand">Damian Galeano</a>
 
         <div class="left">
-
+            <a href="" class="link">Link 2</a>
+            <a href="" class="link">Link 1</a>
         </div>
         <div class="right">
             
