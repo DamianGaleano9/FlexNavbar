@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Navbar</title>
     <style>
         body {
@@ -14,11 +17,11 @@
             background-color: #415068;
         }
 
-        .navbar div{
+        .navbar div {
             display: none;
         }
 
-        .navbar .toggle, 
+        .navbar .toggle,
         .navbar .brand {
             display: inline-block;
         }
@@ -49,16 +52,40 @@
             text-decoration: none;
         }
 
-        .navbar .toggle{
+        .navbar .toggle {
             padding: 1em;
             color: black;
         }
 
+        @media (min-width: 48em) {
+            .navbar {
+                display: flex;
+            }
 
+            .navbar .left,
+            .navbar .right {
+                display: flex;
+                flex: 1;
+
+            }
+
+            .navbar .link {
+                width: auto;
+            }
+
+            .navbar .right {
+                justify-content: flex-end;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="navbar">
+        <a href="#" class="toggle" id="navHamburger">
+            <i class="fas fa-bars"></i>
+        </a>
+
         <a href="#" class="brand">Damian Galeano</a>
 
         <div class="left">
@@ -66,8 +93,9 @@
             <a href="" class="link">Link 1</a>
         </div>
         <div class="right">
-            
+            <a href="" class="link">Link 3</a>
         </div>
     </div>
 </body>
+
 </html>
