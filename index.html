@@ -6,9 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+        integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+
 
     <title>Navbar</title>
     <style>
+        html {
+            font-family: 'Oxygen', sans-serif;
+        }
+
         body {
             margin: 0px;
         }
@@ -26,6 +36,7 @@
             display: inline-block;
         }
 
+        
         .navbar .link {
             display: block;
             text-align: center;
@@ -34,13 +45,12 @@
             background-color: #223047;
             color: white;
         }
-
+        
         .navbar .link:hover,
         .navbar .link:active {
             color: #223047;
             background-color: white;
         }
-
         .navbar .brand {
             width: 10em;
             text-align: center;
@@ -57,8 +67,17 @@
             color: black;
         }
 
+        
         @media (min-width: 48em) {
             .navbar {
+                display: flex;
+            }
+
+
+        }
+
+        @media (min-width: 48em) {
+            .navbar div{
                 display: flex;
             }
 
@@ -66,7 +85,6 @@
             .navbar .right {
                 display: flex;
                 flex: 1;
-
             }
 
             .navbar .link {
@@ -76,7 +94,28 @@
             .navbar .right {
                 justify-content: flex-end;
             }
+
+            .navbar .toggle {
+                display: none;
+            }
         }
+
+        @media (max-width: 48em) {
+            .navbar.active .toggle {
+                background-color: #223047;
+                color: white;
+            }
+
+            .navbar .brand {
+            text-align: left;
+        }
+
+        .navbar.active div {
+            display: block;
+        }
+        
+    }
+        
     </style>
 </head>
 
@@ -89,13 +128,19 @@
         <a href="#" class="brand">Damian Galeano</a>
 
         <div class="left">
-            <a href="" class="link">Link 2</a>
-            <a href="" class="link">Link 1</a>
+            <a href="#" class="link">Link 1</a>
+            <a href="#" class="link">Link 2</a>
         </div>
         <div class="right">
-            <a href="" class="link">Link 3</a>
+            <a href="#" class="link">Link 3</a>
         </div>
     </div>
 </body>
+<script>
+    const navHamburger = document.querySelector('#navHamburger');
+    navHamburger.addEventListener('click', (e) => {
+        navHamburger.parentElement.classList.toggle('active');
+    })
+</script>
 
 </html>
